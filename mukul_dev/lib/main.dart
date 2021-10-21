@@ -86,8 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Image.asset(
-                    "assets/logo.png",
+                  child: Image.network(
+                    "https://mukulml96.github.io/images/logo.png",
                     height: 30,
                   ),
                 ),
@@ -130,8 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: const BoxDecoration(
                         color: Colors.black12,
                         image: DecorationImage(
-                            image: AssetImage(
-                              "assets/cover2.jpeg",
+                            image: NetworkImage(
+                              "https://mukulml96.github.io/images/cover2.jpeg",
                             ),
                             fit: BoxFit.cover)),
                     child: const Padding(
@@ -266,10 +266,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        _project("assets/ss.jpeg"),
-                        _project("assets/ss.jpeg"),
-                        _project("assets/ss.jpeg"),
-                        _project("assets/ss.jpeg")
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
+                        _project("https://mukulml96.github.io/images/ss.jpeg"),
                       ],
                     ),
                   )
@@ -294,7 +296,7 @@ _project(String? img) {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  image: AssetImage("$img"), fit: BoxFit.cover)),
+                  image: NetworkImage("$img"), fit: BoxFit.cover)),
         ),
         InkWell(
           onTap: () async {
