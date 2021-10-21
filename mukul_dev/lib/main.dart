@@ -186,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Text(
-                            "   Dev  Flutter  Swift  Ionic  Android  iOS  Web",
+                            "   Dev • Flutter • Swift • Ionic • Android • iOS • Web",
                             style: TextStyle(color: Colors.white, fontSize: 10),
                           ),
                           SizedBox(
@@ -247,36 +247,86 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
-                    child: Text(
-                      "Mobile App Projects",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
+                children: const [
+                  Text(
+                    "About\n",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        _project(
-                            "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fss.jpeg?alt=media&token=a3779dc9-bd36-4ff5-a104-30c5b2dc2b99"),
-                        _project("assets/ss.jpeg"),
-                        _project("assets/ss.jpeg"),
-                        _project("assets/ss.jpeg")
-                      ],
-                    ),
-                  )
+                  Text(
+                    "Experienced Mobile App developer and an Artist with a demonstrated history of working in IT and design industries. Skilled in Software Coding / Frontend Development with Flutter, Product Design, User Experience (UX), and Logo Design.",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal),
+                  ),
                 ],
               ),
             ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
+                      child: Text(
+                        "Mobile App Projects",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          _project(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fss.jpeg?alt=media&token=a3779dc9-bd36-4ff5-a104-30c5b2dc2b99"),
+                          _project(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2F807.jpg?alt=media&token=268f69c3-fcdb-466b-8525-bd37c1a05007"),
+                          _project(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FLA-cover.jpg?alt=media&token=fd8107a6-3801-4a07-96bb-2df4cb4f75d6"),
+                          _project(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FGCFEATURE.jpg?alt=media&token=c06cb5da-dc49-4e7f-8e56-8e1181f4f8bd"),
+                          _project(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FDarktheme.jpg?alt=media&token=ebe00ba4-25d4-4fa4-bec8-6b710053a2e7")
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 60),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.network(
+                    "https://mukulml96.github.io/images/logo.png",
+                    height: 20,
+                  ),
+                  const Text(
+                    " Made with Flutter",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
@@ -290,13 +340,13 @@ _project(String? img) {
     child: Stack(
       children: [
         Container(
-          width: 140,
-          height: 200,
+          width: 120,
+          height: 80,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  image: NetworkImage("$img"), fit: BoxFit.cover)),
-          child: Image.asset("$img"),
+                  image: NetworkImage(img!), fit: BoxFit.cover)),
+          // child: Image.asset("$img"),
         ),
         InkWell(
           onTap: () async {
@@ -309,8 +359,8 @@ _project(String? img) {
               throw "Could not launch $url";
           },
           child: Container(
-            width: 140,
-            height: 200,
+            width: 120,
+            height: 80,
             decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -324,12 +374,10 @@ _project(String? img) {
                       0.0,
                       1.0
                     ])),
-            child: Center(
-              child: Icon(
-                Icons.open_in_browser,
-                color: Colors.white,
-                size: 34,
-              ),
+            child: Icon(
+              Icons.open_in_browser,
+              color: Colors.white,
+              size: 25,
             ),
           ),
         ),
