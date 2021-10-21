@@ -266,7 +266,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        _project("assets/ss.jpeg"),
+                        _project(
+                            "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fss.jpeg?alt=media&token=a3779dc9-bd36-4ff5-a104-30c5b2dc2b99"),
                         _project("assets/ss.jpeg"),
                         _project("assets/ss.jpeg"),
                         _project("assets/ss.jpeg")
@@ -294,7 +295,7 @@ _project(String? img) {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  image: AssetImage("$img"), fit: BoxFit.cover)),
+                  image: NetworkImage("$img"), fit: BoxFit.cover)),
         ),
         InkWell(
           onTap: () async {
