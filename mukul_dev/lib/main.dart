@@ -130,8 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: const BoxDecoration(
                         color: Colors.black12,
                         image: DecorationImage(
-                            image: AssetImage(
-                              "assets/cover2.jpeg",
+                            image: NetworkImage(
+                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fcover2.jpeg?alt=media&token=a4bb71b7-0e09-4ccd-a728-1a70f1a38ade",
                             ),
                             fit: BoxFit.cover)),
                     child: const Padding(
