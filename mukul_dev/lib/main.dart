@@ -1,4 +1,9 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,105 +16,322 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Mukul ML',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          // primarySwatch: Colors.blue,
+          ),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+  const MyHomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
+      // bottomNavigationBar: BottomNavigationBar(
+      //     backgroundColor: Colors.black,
+      //     fixedColor: Colors.white,
+      //     unselectedItemColor: Colors.white,
+      //     items: [
+      //       const BottomNavigationBarItem(
+      //           title: Text("Home"), icon: Icon(Icons.home_rounded)),
+      //       const BottomNavigationBarItem(
+      //           title: Text("Smile"), icon: Icon(Icons.emoji_emotions)),
+      //       BottomNavigationBarItem(
+      //           title: const Text("Downloads"),
+      //           icon: Stack(
+      //             children: [
+      //               const Icon(Icons.file_download),
+      //               Padding(
+      //                 padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+      //                 child: Container(
+      //                   decoration: const BoxDecoration(
+      //                     shape: BoxShape.circle,
+      //                     color: Colors.red,
+      //                   ),
+      //                   child: const Padding(
+      //                     padding: EdgeInsets.all(5.0),
+      //                     child: Text(
+      //                       "5",
+      //                       style: TextStyle(
+      //                           color: Colors.white,
+      //                           fontSize: 10,
+      //                           fontWeight: FontWeight.bold),
+      //                     ),
+      //                   ),
+      //                 ),
+      //               )
+      //             ],
+      //           ))
+      //     ]),
+      backgroundColor: Colors.black,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        actions: [
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Image.asset(
+                    "assets/logo.png",
+                    height: 30,
+                  ),
+                ),
+                Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: const Icon(
+                        Icons.emoji_emotions,
+                        size: 25,
+                      ),
+                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(horizontal: 20),
+                    //   child: Image.asset(
+                    //     "assets/profile.png",
+                    //     height: 30,
+                    //   ),
+                    // ),
+                  ],
+                ),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 550,
+              child: Stack(
+                children: [
+                  Container(
+                    height: 550,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                        color: Colors.black12,
+                        image: DecorationImage(
+                            image: AssetImage(
+                              "assets/cover2.jpeg",
+                            ),
+                            fit: BoxFit.cover)),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                    ),
+                  ),
+                  Container(
+                    // height: 350.0,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        gradient: LinearGradient(
+                            begin: FractionalOffset.topCenter,
+                            end: FractionalOffset.bottomCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.1),
+                              Colors.black,
+                            ],
+                            stops: const [
+                              0.0,
+                              1.0
+                            ])),
+                  ),
+                  SafeArea(
+                      child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "   Projects          Services          About ",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                          // Icon(
+                          //   Icons.arrow_drop_down,
+                          //   color: Colors.white,
+                          // )
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Padding(
+                            padding:
+                                EdgeInsets.only(bottom: 15, left: 15, top: 10),
+                            child: Text(
+                              "Mukul ML",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Text(
+                            "   Dev  Flutter  Swift  Ionic  Android  iOS  Web",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //   children: [
+                          //     Column(
+                          //       children: const [
+                          //         Icon(
+                          //           Icons.add,
+                          //           color: Colors.white,
+                          //           size: 34,
+                          //         ),
+                          //         Text(
+                          //           "My List",
+                          //           style: TextStyle(
+                          //               color: Colors.white, fontSize: 10),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //     MaterialButton(
+                          //       onPressed: () {},
+                          //       color: Colors.white,
+                          //       child: Row(
+                          //         children: const [
+                          //           Icon(
+                          //             Icons.play_arrow,
+                          //             color: Colors.black,
+                          //             size: 30,
+                          //           ),
+                          //           Text("Play"),
+                          //         ],
+                          //       ),
+                          //     ),
+                          //     Column(
+                          //       children: const [
+                          //         Icon(
+                          //           Icons.add,
+                          //           color: Colors.white,
+                          //           size: 34,
+                          //         ),
+                          //         Text(
+                          //           "My List",
+                          //           style: TextStyle(
+                          //               color: Colors.white, fontSize: 10),
+                          //         ),
+                          //       ],
+                          //     )
+                          //   ],
+                          // )
+                        ],
+                      ),
+                    ],
+                  )),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
+                    child: Text(
+                      "Mobile App Projects",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        _project("assets/ss.jpeg"),
+                        _project("assets/ss.jpeg"),
+                        _project("assets/ss.jpeg"),
+                        _project("assets/ss.jpeg")
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+_project(String? img) {
+  return Padding(
+    padding: const EdgeInsets.all(10.0),
+    child: Stack(
+      children: [
+        Container(
+          width: 140,
+          height: 200,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                  image: AssetImage("$img"), fit: BoxFit.cover)),
+        ),
+        InkWell(
+          onTap: () async {
+            const url =
+                "https://play.google.com/store/apps/details?id=com.mukul.signal_sticker";
+            if (await canLaunch(url))
+              await launch(url);
+            else
+              // can't launch url, there is some error
+              throw "Could not launch $url";
+          },
+          child: Container(
+            width: 140,
+            height: 200,
+            decoration: BoxDecoration(
+                color: Colors.black,
+                gradient: LinearGradient(
+                    begin: FractionalOffset.topCenter,
+                    end: FractionalOffset.bottomCenter,
+                    colors: [
+                      Colors.black.withOpacity(0.2),
+                      Colors.black.withOpacity(0.6),
+                    ],
+                    stops: const [
+                      0.0,
+                      1.0
+                    ])),
+            child: Center(
+              child: Icon(
+                Icons.open_in_browser,
+                color: Colors.white,
+                size: 34,
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
