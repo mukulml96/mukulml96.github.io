@@ -296,6 +296,7 @@ _project(String? img) {
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                   image: NetworkImage("$img"), fit: BoxFit.cover)),
+          child: Image.asset("$img"),
         ),
         InkWell(
           onTap: () async {
