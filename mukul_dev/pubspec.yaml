@@ -35,7 +35,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   antdesign_icons: ^0.0.3
   url_launcher: any
-  velocity_x: ^3.4.0
+  velocity_x:
 
 dev_dependencies:
   flutter_test:

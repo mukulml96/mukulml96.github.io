@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 void main() {
