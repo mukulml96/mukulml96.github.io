@@ -49662,7 +49662,7 @@ A.qH.prototype={
 au(){return new A.Ec(B.n)}}
 A.Ec.prototype={
 N(a,b){var s,r,q,p="https://mukulml96.github.io/images/logo.png",o=null,n=t.E,m=A.b([A.a2P(A.fR(A.b([new A.ci(B.vq,A.a30(p,30),o),A.fR(A.b([new A.ci(B.vm,B.vU,o)],n),B.X,B.R,B.a8)],n),B.X,B.pH,B.a8),1)],n),l=A.it(o,o,o,new A.di(B.l,o,o,o,o,new A.kf(B.vI,B.vH,B.bD,A.b([A.aB(B.e.ak(25.5),0,0,0),A.aB(255,20,40,105)],t.bk),B.kF,o),B.ae),o,o,o,o),k=A.ly(500)
-k=A.it(o,o,o,new A.di(o,A.a2F(B.jJ,new A.iT("https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fdpp%20(1).jpg?alt=media&token=9bc6493a-139f-426c-80d5-1fbb22f8bf8e",1,o)),o,k,o,o,B.ae),120,o,o,120)
+k=A.it(o,o,o,new A.di(o,A.a2F(B.jJ,new A.iT("https://mukulml96.github.io/images/profile.jpeg",1,o)),o,k,o,o,B.ae),120,o,o,120)
 s=A.Bu(" Hola,I'm ",A.hW(o,o,A.aB(204,255,255,255),o,o,o,o,o,o,o,o,13,o,B.q,o,o,!0,o,o,o,o,o,o,o,o),o,o)
 r=A.aB(255,136,136,136)
 q=A.bK(0,0,5)

@@ -184,7 +184,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 borderRadius: BorderRadius.circular(500),
                                 image: DecorationImage(
                                     image: NetworkImage(
-                                        "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fdpp%20(1).jpg?alt=media&token=9bc6493a-139f-426c-80d5-1fbb22f8bf8e"),
+                                      "https://mukulml96.github.io/images/profile.jpeg",
+                                    ),
                                     fit: BoxFit.cover)),
                             // child: Image.asset("$img"),
                           ),
