@@ -383,17 +383,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Row(
                         children: [
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FxpenxFEATURE%20(1).png?alt=media&token=a75facb9-9b22-4bbf-80d8-4c146b288822",
+                              "https://mukulml96.github.io/images/xpenx.png",
                               url:
                                   "https://play.google.com/store/apps/details?id=com.mukul.xpenx",
                               title: "Xpenx"),
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2Fss.jpeg?alt=media&token=a3779dc9-bd36-4ff5-a104-30c5b2dc2b99",
+                              "https://mukulml96.github.io/images/signalstickers.jpeg",
                               url:
                                   "https://play.google.com/store/apps/details?id=com.mukul.signal_sticker",
                               title: "Signal Stickers"),
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FScreenshot%202021-10-23%20at%2011.43.35%20AM.png?alt=media&token=07b117bf-e959-43d4-9322-5f342044d48f",
+                              "https://mukulml96.github.io/images/netflix.png",
                               url: "https://github.com/mukulml96/Netflix-UI",
                               title: "Netflix Clone"),
                         ],
@@ -414,20 +414,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Row(
                         children: [
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FLA-cover.jpg?alt=media&token=fd8107a6-3801-4a07-96bb-2df4cb4f75d6",
+                              "https://mukulml96.github.io/images/lookaround.jpeg",
                               url: "",
                               title: "Look Around"),
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2F807.jpg?alt=media&token=268f69c3-fcdb-466b-8525-bd37c1a05007",
+                              "https://mukulml96.github.io/images/handimed.jpeg",
                               url: "",
                               title: "HandiMed"),
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FGC%20(1).jpg?alt=media&token=d5ddf2f9-2ef2-4f59-8414-7755365e6dd5",
+                              "https://mukulml96.github.io/images/genesisart.jpeg",
                               url: "",
                               title: "Genesis Art Cards"),
                           _project(
-                              "https://firebasestorage.googleapis.com/v0/b/signal-stickers-mukul.appspot.com/o/Portfolio%2FDarktheme.jpg?alt=media&token=ebe00ba4-25d4-4fa4-bec8-6b710053a2e7",
-                              url: "")
+                              "https://mukulml96.github.io/images/taskic.jpeg",
+                              url: "",
+                              title: "Learning Platform")
                         ],
                       ),
                     )
