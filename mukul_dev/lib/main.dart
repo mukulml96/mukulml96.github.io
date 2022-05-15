@@ -1,5 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace
 
+import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //             ],
       //           ))
       //     ]),
-      backgroundColor: Color.fromARGB(255, 12, 8, 77),
+      backgroundColor: const Color.fromARGB(255, 12, 8, 77),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0.0,
@@ -96,9 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: const Icon(
+                    const Padding(
+                      padding: EdgeInsets.only(right: 20),
+                      child: Icon(
                         Icons.emoji_emotions,
                         size: 25,
                       ),
@@ -123,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 300,
+              height: 350,
               child: Stack(
                 children: [
                   // Container(
@@ -148,8 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             begin: FractionalOffset.topCenter,
                             end: FractionalOffset.bottomCenter,
                             colors: [
-                              Color.fromARGB(255, 35, 35, 35).withOpacity(0.1),
-                              Color.fromARGB(255, 46, 67, 138),
+                              const Color.fromARGB(255, 35, 35, 35)
+                                  .withOpacity(0.1),
+                              const Color.fromARGB(255, 46, 67, 138),
                             ],
                             stops: const [
                               0.0,
@@ -182,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 120,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(45),
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                     image: NetworkImage(
                                       "https://mukulml96.github.io/images/profile.jpeg",
                                     ),
@@ -190,8 +192,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             // child: Image.asset("$img"),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsets.only(bottom: 15, left: 15, top: 10),
+                            padding: const EdgeInsets.only(
+                                bottom: 15, left: 15, top: 10),
                             child: Column(
                               children: [
                                 Column(
@@ -205,13 +207,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 13,
                                           fontWeight: FontWeight.normal),
                                     ),
-                                    VxShimmer(
-                                      primaryColor:
-                                          Color.fromARGB(255, 136, 136, 136),
+                                    const VxShimmer(
+                                      primaryColor: const Color.fromARGB(
+                                          255, 136, 136, 136),
                                       duration: Duration(seconds: 3),
                                       child: Text(
                                         "Mukul ML",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 48,
                                             fontWeight: FontWeight.bold),
@@ -219,21 +221,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                     Row(
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.developer_mode,
                                           size: 15,
                                           color: Colors.white,
                                         ),
-                                        Text(
+                                        const Text(
                                           " Mobile Application Developer",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 3),
+                                    const SizedBox(height: 3),
                                     // Container(
                                     //   width:
                                     //       MediaQuery.of(context).size.width / 3,
@@ -294,7 +296,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
 
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           // Row(
@@ -346,6 +348,106 @@ class _MyHomePageState extends State<MyHomePage> {
                           // )
                         ],
                       ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.white)),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8),
+                              child: const Text(
+                                "Get In Touch",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        const url =
+                                            "https://www.linkedin.com/in/mukul-ml-a7ba9015b/";
+                                        if (await canLaunch(url))
+                                          await launch(url);
+                                        else
+                                          // can't launch url, there is some error
+                                          throw "Could not launch $url";
+                                      },
+                                      child: Icon(
+                                        AntIcons.linkedinFilled,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        const url =
+                                            "https://github.com/mukulml96";
+                                        if (await canLaunch(url))
+                                          await launch(url);
+                                        else
+                                          // can't launch url, there is some error
+                                          throw "Could not launch $url";
+                                      },
+                                      child: Icon(
+                                        AntIcons.githubFilled,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        const url =
+                                            "https://play.google.com/store/apps/dev?id=5699858615330925502";
+                                        if (await canLaunch(url))
+                                          await launch(url);
+                                        else
+                                          // can't launch url, there is some error
+                                          throw "Could not launch $url";
+                                      },
+                                      child: Icon(
+                                        Icons.play_arrow,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        const url =
+                                            "https://twitter.com/mukulml96";
+                                        if (await canLaunch(url))
+                                          await launch(url);
+                                        else
+                                          // can't launch url, there is some error
+                                          throw "Could not launch $url";
+                                      },
+                                      child: Icon(
+                                        AntIcons.twitterSquareFilled,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   )),
                 ],
@@ -361,7 +463,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     const Padding(
                       padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
                       child: Text(
-                        "Mobile App Projects",
+                        " Featured Mobile App Projects",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
@@ -402,7 +504,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     const Padding(
                       padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
                       child: Text(
-                        "Company/Freelance Projects",
+                        "Other Projects",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
@@ -415,15 +517,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           _project(
                               "https://mukulml96.github.io/images/lookaround.jpeg",
-                              url: "",
+                              url:
+                                  "http://play.google.com/store/apps/details?id=com.cn.lookaround",
                               title: "Look Around"),
                           _project(
                               "https://mukulml96.github.io/images/handimed.jpeg",
-                              url: "",
+                              url:
+                                  "https://play.google.com/store/apps/details?id=com.cognosin.HandiMed",
                               title: "HandiMed"),
                           _project(
                               "https://mukulml96.github.io/images/genesisart.jpeg",
-                              url: "",
+                              url:
+                                  "https://apps.apple.com/us/app/genesis-art-cards/id1553675535",
                               title: "Genesis Art Cards"),
                           _project(
                               "https://mukulml96.github.io/images/taskic.jpeg",
@@ -455,7 +560,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             )
           ],
@@ -472,7 +577,7 @@ _tags(text) {
       hoverColor: Colors.blue,
       child: Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 7, 47, 107),
+            color: const Color.fromARGB(255, 7, 47, 107),
             borderRadius: BorderRadius.circular(5)),
         child: Row(
           children: [
@@ -480,7 +585,7 @@ _tags(text) {
               padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
               child: Text(
                 text,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 10,
                     fontWeight: FontWeight.bold),
@@ -541,7 +646,7 @@ _project(String? img, {url, title}) {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     // Icon(
                     //   Icons.open_in_browser,
                     //   color: Colors.white,
@@ -577,7 +682,7 @@ _project(String? img, {url, title}) {
           padding: const EdgeInsets.only(top: 10),
           child: Text(
             title ?? "Signal Stickers",
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
           ),
         ),
