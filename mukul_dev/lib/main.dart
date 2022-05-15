@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mukul ML',
       theme: ThemeData(
-          // primarySwatch: Colors.blue,
+          // primarySwatch:MaterialColor(primary, swatch),
           ),
       home: const MyHomePage(),
     );
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //             ],
       //           ))
       //     ]),
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 12, 8, 77),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0.0,
@@ -148,8 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             begin: FractionalOffset.topCenter,
                             end: FractionalOffset.bottomCenter,
                             colors: [
-                              Colors.black.withOpacity(0.1),
-                              Color.fromARGB(255, 20, 40, 105),
+                              Color.fromARGB(255, 35, 35, 35).withOpacity(0.1),
+                              Color.fromARGB(255, 46, 67, 138),
                             ],
                             stops: const [
                               0.0,
@@ -181,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 120,
                             height: 120,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
+                                borderRadius: BorderRadius.circular(45),
                                 image: DecorationImage(
                                     image: NetworkImage(
                                       "https://mukulml96.github.io/images/profile.jpeg",
@@ -208,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     VxShimmer(
                                       primaryColor:
                                           Color.fromARGB(255, 136, 136, 136),
-                                      duration: Duration(seconds: 5),
+                                      duration: Duration(seconds: 3),
                                       child: Text(
                                         "Mukul ML",
                                         style: TextStyle(
