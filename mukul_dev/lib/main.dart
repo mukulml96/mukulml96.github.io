@@ -21,8 +21,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mukul ML',
       theme: ThemeData(
-          // primarySwatch:MaterialColor(primary, swatch),
-          ),
+        primaryColor: Colors.black,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: const MyHomePage(),
     );
   }
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //             ],
       //           ))
       //     ]),
-      backgroundColor: const Color.fromARGB(255, 12, 8, 77),
+      backgroundColor: Color(0xFF0C084D),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0.0,
@@ -348,104 +349,107 @@ class _MyHomePageState extends State<MyHomePage> {
                           // )
                         ],
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white)),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8),
-                              child: const Text(
-                                "Get In Touch",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.normal),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.white)),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8),
+                                child: const Text(
+                                  "Get In Touch",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.normal),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        const url =
-                                            "https://www.linkedin.com/in/mukul-ml-a7ba9015b/";
-                                        if (await canLaunch(url))
-                                          await launch(url);
-                                        else
-                                          // can't launch url, there is some error
-                                          throw "Could not launch $url";
-                                      },
-                                      child: Icon(
-                                        AntIcons.linkedinFilled,
-                                        color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        onTap: () async {
+                                          const url =
+                                              "https://www.linkedin.com/in/mukul-ml-a7ba9015b/";
+                                          if (await canLaunch(url))
+                                            await launch(url);
+                                          else
+                                            // can't launch url, there is some error
+                                            throw "Could not launch $url";
+                                        },
+                                        child: Icon(
+                                          AntIcons.linkedinFilled,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        const url =
-                                            "https://github.com/mukulml96";
-                                        if (await canLaunch(url))
-                                          await launch(url);
-                                        else
-                                          // can't launch url, there is some error
-                                          throw "Could not launch $url";
-                                      },
-                                      child: Icon(
-                                        AntIcons.githubFilled,
-                                        color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        onTap: () async {
+                                          const url =
+                                              "https://github.com/mukulml96";
+                                          if (await canLaunch(url))
+                                            await launch(url);
+                                          else
+                                            // can't launch url, there is some error
+                                            throw "Could not launch $url";
+                                        },
+                                        child: Icon(
+                                          AntIcons.githubFilled,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        const url =
-                                            "https://play.google.com/store/apps/dev?id=5699858615330925502";
-                                        if (await canLaunch(url))
-                                          await launch(url);
-                                        else
-                                          // can't launch url, there is some error
-                                          throw "Could not launch $url";
-                                      },
-                                      child: Icon(
-                                        Icons.play_arrow,
-                                        color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        onTap: () async {
+                                          const url =
+                                              "https://play.google.com/store/apps/dev?id=5699858615330925502";
+                                          if (await canLaunch(url))
+                                            await launch(url);
+                                          else
+                                            // can't launch url, there is some error
+                                            throw "Could not launch $url";
+                                        },
+                                        child: Icon(
+                                          Icons.play_arrow,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        const url =
-                                            "https://twitter.com/mukulml96";
-                                        if (await canLaunch(url))
-                                          await launch(url);
-                                        else
-                                          // can't launch url, there is some error
-                                          throw "Could not launch $url";
-                                      },
-                                      child: Icon(
-                                        AntIcons.twitterSquareFilled,
-                                        color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        onTap: () async {
+                                          const url =
+                                              "https://twitter.com/mukulml96";
+                                          if (await canLaunch(url))
+                                            await launch(url);
+                                          else
+                                            // can't launch url, there is some error
+                                            throw "Could not launch $url";
+                                        },
+                                        child: Icon(
+                                          AntIcons.twitterSquareFilled,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -463,7 +467,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     const Padding(
                       padding: EdgeInsets.only(bottom: 15, left: 15, top: 10),
                       child: Text(
-                        " Featured Mobile App Projects",
+                        "Featured Mobile App Projects",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
